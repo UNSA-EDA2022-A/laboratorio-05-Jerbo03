@@ -1,4 +1,4 @@
-[package com.example.project;
+package com.example.project;
 
 import java.util.Scanner;
 
@@ -15,6 +15,6 @@ public class Exercise2 {
     public boolean existenDuplicados(String str) {
         MyStack<Character> stack = new LinkedListStack<>();
         
-        return true;
+        return false;
     }
 }
