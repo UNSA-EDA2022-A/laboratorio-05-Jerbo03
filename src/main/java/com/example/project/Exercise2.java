@@ -15,12 +15,12 @@ public class Exercise2 {
     public boolean existenDuplicados(String str) {
         MyStack<Character> stack = new LinkedListStack<>();
         int estado = 0; // 0 = bien, 1 = "((...", 2 = "((...))" => false
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             if (estado == 0)
-                if (stack.top().equals('(') == 0 && str.charAt(i) == '(')
+                if (stack.top().equals('(') && str.charAt(i) == '(')
                     estado = 1;
             if (estado == 1 && str.charAt(i) == ')') {
-                if (stack.top().equals(')') == 0)
+                if (stack.top().equals(')'))
                     return false;
                 else
                     estado = 0;
