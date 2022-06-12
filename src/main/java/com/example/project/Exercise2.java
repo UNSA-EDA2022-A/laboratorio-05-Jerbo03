@@ -22,12 +22,12 @@ public class Exercise2 {
                     estado = 1;
             if (estado == 1 && str.charAt(i) == ')') {
                 if (stack.top().equals(')'))
-                    return false;
+                    return true;
                 else
                     estado = 0;
             }
             stack.push(str.charAt(i));
         }
-        return true;
+        return false;
     }
 }
