@@ -41,7 +41,7 @@ public class LinkedListStack<T extends Comparable<T>> implements MyStack<T> {
 
         // Ejemplo de insercion de elementos en la pila
         for (int i = 1; i <= 8; i++)
-            s.push(i); // inserta ‘i’ en la parte superior de la pila
+            s.push(i); // inserta 'i' en la parte superior de la pila
         System.out.println(s);
 
         // Ejemplo de eliminacion de elementos de la pila
