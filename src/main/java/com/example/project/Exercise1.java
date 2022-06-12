@@ -22,9 +22,9 @@ public class Exercise1 {
             } else {
                 char top = stack.pop();
                 if(!(
-                    (str.charAt(i) == ')') && top == '(') ||
-                    (str.charAt(i) == '}') && top == '{') ||
-                    (str.charAt(i) == ']') && top == '[') ||
+                    (str.charAt(i) == ')' && top == '(') ||
+                    (str.charAt(i) == '}' && top == '{') ||
+                    (str.charAt(i) == ']' && top == '[')
                     )) {
                     return false;
                 }
