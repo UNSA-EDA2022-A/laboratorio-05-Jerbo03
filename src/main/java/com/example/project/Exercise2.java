@@ -15,7 +15,8 @@ public class Exercise2 {
     public boolean existenDuplicados(String str) {
         MyStack<Character> stack = new LinkedListStack<>();
         int estado = 0; // 0 = bien, 1 = "((...", 2 = "((...))" => false
-        for (int i = 0; i < str.length(); i++) {
+        stack.push(str.charAt(0));
+        for (int i = 1; i < str.length(); i++) {
             if (estado == 0)
                 if (stack.top().equals('(') && str.charAt(i) == '(')
                     estado = 1;
