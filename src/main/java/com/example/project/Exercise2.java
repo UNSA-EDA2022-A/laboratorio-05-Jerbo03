@@ -22,7 +22,7 @@ public class Exercise2 {
                     estado = 1;
             if (estado == 1 && str.charAt(i) == ')')
                 estado = 2;
-            if (estado == 2) 
+            if (estado == 2) {
                 if (str.charAt(i) == ')') return true;
                 else estado = 0;
             }
