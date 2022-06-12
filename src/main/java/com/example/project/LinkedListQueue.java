@@ -36,22 +36,22 @@ public class LinkedListQueue<T extends Comparable<T>> implements MyQueue<T> {
 
     public static void main(String[] args) {
 
-        // Creación de cola
+        // Creacion de cola
         MyQueue<Integer> q = new LinkedListQueue<Integer>();
 
-        // Ejemplo de inserción de elementos en la cola
+        // Ejemplo de insercion de elementos en la cola
         for (int i = 1; i <= 8; i++)
             q.enqueue(i); // insertar ‘i’ al final de la cola
         System.out.println(q);
 
-        // Ejemplo de eliminación de elementos de la cola
+        // Ejemplo de eliminacion de elementos de la cola
         for (int i = 0; i < 4; i++) {
             int aux = q.dequeue(); // elimina el elemento al principio de la cola
             System.out.println("q.dequeue() = " + aux);
         }
         System.out.println(q);
 
-        // Ejemplo de uso de otros métodos
+        // Ejemplo de uso de otros metodos
         System.out.println("q.size() = " + q.size());
         System.out.println("q.isEmpty() = " + q.isEmpty());
         System.out.println("q.first() = " + q.first());
