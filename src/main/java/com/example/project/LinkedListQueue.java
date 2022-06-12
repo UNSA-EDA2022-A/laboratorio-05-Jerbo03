@@ -41,7 +41,7 @@ public class LinkedListQueue<T extends Comparable<T>> implements MyQueue<T> {
 
         // Ejemplo de insercion de elementos en la cola
         for (int i = 1; i <= 8; i++)
-            q.enqueue(i); // insertar ‘i’ al final de la cola
+            q.enqueue(i); // insertar 'i' al final de la cola
         System.out.println(q);
 
         // Ejemplo de eliminacion de elementos de la cola
