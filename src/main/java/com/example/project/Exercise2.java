@@ -14,6 +14,7 @@ public class Exercise2 {
 
     public boolean existenDuplicados(String str) {
         MyStack<Character> stack = new LinkedListStack<>();
+        boolean admitir = true;
         for (int i = 0; i < str.length(); i++) { // Itineramos por el array
             if (str.charAt(i) == ')') { // Si encontramos un parentesis de cierre
                 char last = stack.pop(); // Eliminamos el contenido que encierra
@@ -21,7 +22,9 @@ public class Exercise2 {
                 while (last != '(') last = stack.pop(); // Eliminamos el contenido que encierra
                 continue; // Y no agregamos nada
             }
-            stack.push(str.charAt(i)); // Si no es un parentesis de cierre agregamos el caracter
+            if (!(str.charAt(i) == '(' || admitir)) continue; // Si no es un parentesis y ya se adminitio otro "relleno", no agregrar
+            admitir = (str.charAt(i) == '('); // Si se acepta "relleno", agregarlo pero bloquear otros caracteres
+            stack.push(str.charAt(i)); // Agregar si es "(", no ")", y si no hay otros caracteres de "relleno"
         }
         return false;
     }
