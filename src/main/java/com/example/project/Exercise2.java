@@ -17,7 +17,7 @@ public class Exercise2 {
         for (int i = 0; i < str.length(); i++) { // Itineramos por el array
             if (str.charAt(i) == ')') { // Si encontramos un parentesis de cierre
                 char last = stack.pop(); // Eliminamos el contenido que encierra
-                if (last == '(') return True; // Solo si no encierra ningun contenido, es porque su contenido ya pertenecia a otro par de parentesis
+                if (last == '(') return true; // Solo si no encierra ningun contenido, es porque su contenido ya pertenecia a otro par de parentesis
                 while (last != '(') last = stack.pop(); // Eliminamos el contenido que encierra
                 continue; // Y no agregamos nada
             }
