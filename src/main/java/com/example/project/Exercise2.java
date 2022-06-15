@@ -21,7 +21,8 @@ public class Exercise2 {
                 if (last == '(') return true; // Solo si no encierra ningun contenido, es porque su contenido ya pertenecia a otro par de parentesis
                 while (last != '(') last = stack.pop(); // Eliminamos el contenido que encierra
                 // Como se esta eliminando el "relleno" del parentesis, permitir mas si es que no los hay ya
-                admitir = (stack.top() == '('); // Comprobar que el ultimo caracter no sea relleno
+                if (!(stack.isEmpty())) admitir = (stack.top() == '('); // Comprobar que el ultimo caracter no sea relleno
+                else admitir = true;
                 continue; // Y no agregamos nada
             }
             if (!(str.charAt(i) == '(' || admitir)) continue; // Si no es un parentesis y ya se adminitio otro "relleno", no agregrar
